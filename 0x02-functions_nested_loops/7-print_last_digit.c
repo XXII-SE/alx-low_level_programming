@@ -1,20 +1,18 @@
-#include "holberton.h"
+#include <stdio.h>
+
 /**
- * print_last_digit - function that computes the absolute value of an integer
- * @c:  is the int that will use for the argument of the function
- * Return: 0
+ * main - prints the lowercase alphabet in reverse,
+ * followed by a new line
+ * Return: Always 0 (Success)
  */
-int print_last_digit(int c)
+int main(void)
 {
-	if (c > 0 || c == 0)
+	char ch;
+
+	for (ch = 'z'; ch >= 'a'; ch--)
 	{
-	_putchar (c % 10 + '0');
-	return (c % 10);
+		putchar(ch);
 	}
-	else
-	{
-	c = c * -1;
-	_putchar (c % 10 + '0');
-	return (c % 10);
-	}
+	putchar('\n');
+	return (0);
 }
